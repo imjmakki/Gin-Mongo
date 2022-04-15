@@ -28,7 +28,7 @@ func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 	var user *model.User
 	query := bson.D{bson.E{Key: "name", Value: name}}
 	err := u.usercollection.FindOne(u.ctx, query).Decode(&user)
-	return nil, nil
+	return user, err
 }
 
 func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
