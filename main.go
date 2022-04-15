@@ -38,6 +38,7 @@ func init() {
 
 	usercollection = mongoclient.Database("userdb").Collection("users")
 	userservice = service.NewUserService(usercollection, ctx)
+	usercontroller = controller.New(userservice)
 }
 
 func main() {
