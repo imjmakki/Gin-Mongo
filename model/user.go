@@ -1,8 +1,9 @@
 package model
 
 type Address struct {
-	State, City string
-	PinCode     int
+	State   string `json:"state" bson:"state"`
+	City    string `json:"city" bson:"city"`
+	Pincode int    `json:"pincode" bson:"pincode"`
 }
 
 type User struct {
