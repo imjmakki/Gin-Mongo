@@ -14,6 +14,7 @@ var (
 	usercontroller controller.UserController
 	ctx            context.Context
 	usercollectoin *mongo.Collection
+	mongoclient    *mongo.Client
 )
 
 func main() {
