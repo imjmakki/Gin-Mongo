@@ -6,6 +6,7 @@ import (
 	"context"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var (
@@ -20,6 +21,8 @@ var (
 
 func init() {
 	ctx = context.TODO()
+
+	mongocon := options.Client().ApplyURI("mongodb://localhost:27017")
 }
 
 func main() {
