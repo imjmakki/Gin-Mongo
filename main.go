@@ -5,6 +5,7 @@ import (
 	"Gin-Mongo/service"
 	"context"
 	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 var (
@@ -12,6 +13,7 @@ var (
 	userservice    service.UserService
 	usercontroller controller.UserController
 	ctx            context.Context
+	usercollectoin *mongo.Collection
 )
 
 func main() {
