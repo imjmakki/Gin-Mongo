@@ -3,6 +3,7 @@ package controller
 import (
 	"Gin-Mongo/model"
 	"Gin-Mongo/service"
+	"github.com/gin-gonic/gin"
 )
 
 type UserController struct {
@@ -15,7 +16,7 @@ func New(userService service.UserService) UserController {
 	}
 }
 
-func (u *UserServiceImpl) CreateUser(user *model.User) {
+func (u *UserController) CreateUser(ctx *gin.Context) {
 	return nil
 }
 
