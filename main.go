@@ -19,7 +19,7 @@ var (
 )
 
 func init() {
-
+	ctx = context.TODO()
 }
 
 func main() {
