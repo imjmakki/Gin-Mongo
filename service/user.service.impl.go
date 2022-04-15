@@ -50,6 +50,9 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 		return nil, err
 	}
 	cursor.Close(u.ctx)
+	if len(users) == 0 {
+
+	}
 	return nil, nil
 }
 
