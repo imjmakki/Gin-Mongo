@@ -15,6 +15,7 @@ var (
 	ctx            context.Context
 	usercollectoin *mongo.Collection
 	mongoclient    *mongo.Client
+	err            error
 )
 
 func main() {
