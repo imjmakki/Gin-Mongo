@@ -41,4 +41,5 @@ func (uc *UserController) RegisterUser(rg *gin.RouterGroup) {
 	userroute.GET("/get/:name", uc.GetUser)
 	userroute.GET("/get-users", uc.GetAll)
 	userroute.PATCH("/update", uc.UpdateUser)
+	userroute.DELETE("/delete", uc.DeleteUser)
 }
