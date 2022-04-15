@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"log"
 )
 
 var (
@@ -25,6 +26,7 @@ func init() {
 	mongocon := options.Client().ApplyURI("mongodb://localhost:27017")
 	mongoclient, err = mongo.Connect(ctx, mongocon)
 	if err != nil {
+		log.Fatal()
 	}
 }
 
