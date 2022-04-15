@@ -15,22 +15,22 @@ func New(userService service.UserService) UserController {
 	}
 }
 
-func (u *UserController) CreateUser(ctx *gin.Context) {
+func (uc *UserController) CreateUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserController) GetUser(ctx *gin.Context) {
+func (uc *UserController) GetUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserController) GetAll(ctx *gin.Context) {
+func (uc *UserController) GetAll(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserController) UpdateUser(ctx *gin.Context) {
+func (uc *UserController) UpdateUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserController) DeleteUser(ctx *gin.Context) {
+func (uc *UserController) DeleteUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
