@@ -43,5 +43,5 @@ func init() {
 }
 
 func main() {
-
+	defer mongoclient.Disconnect()
 }
