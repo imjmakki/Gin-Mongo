@@ -43,5 +43,6 @@ func init() {
 }
 
 func main() {
-	defer mongoclient.Disconnect()
+	defer mongoclient.Disconnect(ctx)
+	basepath := server.Group("/v1")
 }
