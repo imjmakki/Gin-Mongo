@@ -53,7 +53,7 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 	if len(users) == 0 {
 		return nil, errors.New("user not found")
 	}
-	return nil, nil
+	return users, nil
 }
 
 func (u *UserServiceImpl) UpdateUser(user *model.User) error {
