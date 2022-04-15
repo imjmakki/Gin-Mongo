@@ -61,7 +61,7 @@ func (uc *UserController) UpdateUser(ctx *gin.Context) {
 
 func (uc *UserController) DeleteUser(ctx *gin.Context) {
 	username := ctx.Param("name")
-	uc.UserService.DeleteUser(&username)
+	err := uc.UserService.DeleteUser(&username)
 	ctx.JSON(200, "")
 }
 
