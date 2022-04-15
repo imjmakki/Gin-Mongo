@@ -34,8 +34,9 @@ func init() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	fmt.Println("DB connected!")
+
+	usercollection = mongoclient.Database("userdb").Collection("users")
 }
 
 func main() {
