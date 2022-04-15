@@ -6,5 +6,5 @@ type UserController struct {
 	UserService service.UserService
 }
 
-func New() UserController {
+func New(userService service.UserService) UserController {
 }
