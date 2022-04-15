@@ -33,6 +33,7 @@ func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 }
 
 func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
+	var users []*model.User
 	return nil, nil
 }
 
