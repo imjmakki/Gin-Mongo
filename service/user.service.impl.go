@@ -12,6 +12,7 @@ type UserServiceImpl struct {
 }
 
 func NewUserService(usercollection *mongo.Collection, ctx context.Context) UserService {
+	return &UserServiceImpl{}
 }
 
 func (u *UserServiceImpl) CreateUser(user *model.User) error {
