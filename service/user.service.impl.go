@@ -3,6 +3,7 @@ package service
 import (
 	"Gin-Mongo/model"
 	"context"
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -25,6 +26,7 @@ func (u *UserServiceImpl) CreateUser(user *model.User) error {
 
 func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 	var user *model.User
+	query := bson.D{}
 	return nil, nil
 }
 
