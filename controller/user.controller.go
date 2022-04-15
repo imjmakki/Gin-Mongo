@@ -7,4 +7,7 @@ type UserController struct {
 }
 
 func New(userService service.UserService) UserController {
+	return UserController{
+		UserService: userService,
+	}
 }
