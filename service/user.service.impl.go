@@ -38,7 +38,8 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 	if err != nil {
 		return nil, err
 	}
-	for cursor.Next()
+	for cursor.Next(u.ctx) {
+	}
 	return nil, nil
 }
 
