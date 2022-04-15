@@ -46,7 +46,17 @@ func (uc *UserController) GetAll(ctx *gin.Context) {
 }
 
 func (uc *UserController) UpdateUser(ctx *gin.Context) {
-	ctx.JSON(200, "")
+	var user model.User
+	if err := ctx.ShouldBindJSON(&user); err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"message": err.Error()})
+		return
+	}
+	err := uc.UserService.UpdateUser(&user)
+	if err != nil {
+		ctx.JSON(http.StatusBadGateway, gin.H{"message": err.Error()})
+		return
+	}
+	ctx.JSON(http.StatusOK, gin.H{"message": "success"})
 }
 
 func (uc *UserController) DeleteUser(ctx *gin.Context) {
