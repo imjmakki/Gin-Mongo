@@ -36,4 +36,5 @@ func (uc *UserController) DeleteUser(ctx *gin.Context) {
 }
 
 func (uc *UserController) RegisterUser(rg *gin.RouterGroup) {
+	userroute := rg.Group("/user")
 }
