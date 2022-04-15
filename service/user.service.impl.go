@@ -26,3 +26,7 @@ func (u *UserServiceImpl) GetAll() []*model.User {
 func (u *UserServiceImpl) UpdateUser(user *model.User) error {
 	return nil
 }
+
+func (u *UserServiceImpl) DeleteUser(name *string) error {
+	return nil
+}
