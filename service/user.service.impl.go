@@ -26,7 +26,7 @@ func (u *UserServiceImpl) CreateUser(user *model.User) error {
 
 func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 	var user *model.User
-	query := bson.D{}
+	query := bson.D{bson.E{Key: "name", Value: name}}
 	return nil, nil
 }
 
