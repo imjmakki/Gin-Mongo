@@ -26,7 +26,7 @@ func (u *UserServiceImpl) CreateUser(user *model.User) error {
 
 func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 	var user *model.User
-	query := bson.D{bson.E{Key: "name", Value: name}}
+	query := bson.D{bson.E{Key: "user_name", Value: name}}
 	err := u.usercollection.FindOne(u.ctx, query).Decode(&user)
 	return user, err
 }
@@ -36,7 +36,7 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 }
 
 func (u *UserServiceImpl) UpdateUser(user *model.User) error {
-	filter := bson.D{bson.E{Key: "name", Value: user.Name}}
+	filter := bson.D{bson.E{Key: "user_name", Value: user.Name}}
 	return nil
 }
 
