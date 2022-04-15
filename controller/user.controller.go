@@ -4,6 +4,7 @@ import (
 	"Gin-Mongo/model"
 	"Gin-Mongo/service"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 type UserController struct {
@@ -18,7 +19,9 @@ func New(userService service.UserService) UserController {
 
 func (uc *UserController) CreateUser(ctx *gin.Context) {
 	var user model.User
-	ctx.ShouldBindJSON(&user)
+	if err := ctx.ShouldBindJSON(&user); err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"message": err.Error()})
+	}
 	ctx.JSON(200, "")
 }
 
