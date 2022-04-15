@@ -18,3 +18,11 @@ func (u *UserServiceImpl) CreateUser(user *model.User) error {
 func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 	return nil, nil
 }
+
+func (u *UserServiceImpl) GetAll() []*model.User {
+	return nil
+}
+
+func (u *UserServiceImpl) UpdateUser(user *model.User) error {
+	return nil
+}
