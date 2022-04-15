@@ -47,7 +47,7 @@ func (uc *UserController) GetAll(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadGateway, gin.H{"message": err.Error()})
 		return
 	}
-	ctx.JSON(200, "")
+	ctx.JSON(http.StatusOK, users)
 }
 
 func (uc *UserController) UpdateUser(ctx *gin.Context) {
