@@ -17,7 +17,7 @@ var (
 	userservice    service.UserService
 	usercontroller controller.UserController
 	ctx            context.Context
-	usercollectoin *mongo.Collection
+	usercollection *mongo.Collection
 	mongoclient    *mongo.Client
 	err            error
 )
@@ -37,6 +37,7 @@ func init() {
 	fmt.Println("DB connected!")
 
 	usercollection = mongoclient.Database("userdb").Collection("users")
+	userservice = service.NewUserService(usercollection, ctx)
 }
 
 func main() {
