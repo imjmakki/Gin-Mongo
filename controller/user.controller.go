@@ -42,6 +42,7 @@ func (uc *UserController) GetUser(ctx *gin.Context) {
 }
 
 func (uc *UserController) GetAll(ctx *gin.Context) {
+	users, err := uc.UserService.GetAll()
 	ctx.JSON(200, "")
 }
 
