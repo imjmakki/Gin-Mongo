@@ -28,7 +28,7 @@ func (uc *UserController) CreateUser(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadGateway, gin.H{"message": err.Error()})
 		return
 	}
-	ctx.JSON(200, "")
+	ctx.JSON(http.StatusOK, gin.H{"message": "success"})
 }
 
 func (uc *UserController) GetUser(ctx *gin.Context) {
