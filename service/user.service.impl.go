@@ -38,6 +38,7 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 func (u *UserServiceImpl) UpdateUser(user *model.User) error {
 	filter := bson.D{bson.E{Key: "user_name", Value: user.Name}}
 	update := bson.D{bson.E{Key: "$set", Value: bson.D{bson.E{Key: "user_name", Value: user.Name}, bson.E{Key: "user_age", Value: user.Age}, bson.E{Key: "user_address", Value: user.Address}}}}
+	u.usercollection.UpdateOne(u.ctx, filter, update)
 	return nil
 }
 
