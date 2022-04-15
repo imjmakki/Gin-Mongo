@@ -47,6 +47,6 @@ func (u *UserServiceImpl) UpdateUser(user *model.User) error {
 }
 
 func (u *UserServiceImpl) DeleteUser(name *string) error {
-	filter := bson.D{bson.E{Key: "user_name", Value: user.Name}}
+	filter := bson.D{bson.E{Key: "user_name", Value: name}}
 	return nil
 }
