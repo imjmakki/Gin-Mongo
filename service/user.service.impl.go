@@ -39,6 +39,12 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 		return nil, err
 	}
 	for cursor.Next(u.ctx) {
+		var user model.User
+		err := cursor.Decode(&user)
+		if err != nil {
+			return nil, err
+		}
+		users = append(users, &user)
 	}
 	return nil, nil
 }
