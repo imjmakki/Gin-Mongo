@@ -23,7 +23,9 @@ func init() {
 	ctx = context.TODO()
 
 	mongocon := options.Client().ApplyURI("mongodb://localhost:27017")
-	mongoclient, err = mongo.Connect()
+	mongoclient, err = mongo.Connect(ctx, mongocon)
+	if err != nil {
+	}
 }
 
 func main() {
