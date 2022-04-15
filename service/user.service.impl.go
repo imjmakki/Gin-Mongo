@@ -49,7 +49,7 @@ func (u *UserServiceImpl) UpdateUser(user *model.User) error {
 func (u *UserServiceImpl) DeleteUser(name *string) error {
 	filter := bson.D{bson.E{Key: "user_name", Value: name}}
 	result, _ := u.usercollection.DeleteOne(u.ctx, filter)
-	if result.MatchedCount != 1 {
+	if result.DeletedCount != 1 {
 		return errors.New("no match for this user")
 	}
 	return nil
