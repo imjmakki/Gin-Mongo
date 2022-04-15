@@ -25,7 +25,7 @@ func (uc *UserController) CreateUser(ctx *gin.Context) {
 	}
 	err := uc.UserService.CreateUser(&user)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, gin.H{"message": err.Error()})
+		ctx.JSON(http.StatusBadGateway, gin.H{"message": err.Error()})
 		return
 	}
 	ctx.JSON(200, "")
