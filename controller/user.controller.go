@@ -39,6 +39,6 @@ func (uc *UserController) RegisterUser(rg *gin.RouterGroup) {
 	userroute := rg.Group("/user")
 	userroute.POST("/create", uc.CreateUser)
 	userroute.GET("/get/:name", uc.GetUser)
-	userroute.GET("/getUsers", uc.GetAll)
+	userroute.GET("/get-users", uc.GetAll)
 	userroute.POST("/create", uc.CreateUser)
 }
