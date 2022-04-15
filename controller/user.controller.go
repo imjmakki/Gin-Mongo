@@ -35,5 +35,5 @@ func (uc *UserController) DeleteUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (uc *UserController) RegisterUser() {
+func (uc *UserController) RegisterUser(rg *gin.RouterGroup) {
 }
