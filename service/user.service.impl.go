@@ -12,7 +12,10 @@ type UserServiceImpl struct {
 }
 
 func NewUserService(usercollection *mongo.Collection, ctx context.Context) UserService {
-	return &UserServiceImpl{}
+	return &UserServiceImpl{
+		usercollection: usercollection,
+		ctx:            ctx,
+	}
 }
 
 func (u *UserServiceImpl) CreateUser(user *model.User) error {
@@ -23,8 +26,8 @@ func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
 	return nil, nil
 }
 
-func (u *UserServiceImpl) GetAll() []*model.User {
-	return nil
+func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
+	return nil, nil
 }
 
 func (u *UserServiceImpl) UpdateUser(user *model.User) error {
