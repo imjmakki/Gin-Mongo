@@ -45,4 +45,7 @@ func init() {
 func main() {
 	defer mongoclient.Disconnect(ctx)
 	basepath := server.Group("/v1")
+	usercontroller.RegisterUser(basepath)
+
+	log.Fatal(server.Run(":9090"))
 }
