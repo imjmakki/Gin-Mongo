@@ -6,7 +6,7 @@ type Address struct {
 }
 
 type User struct {
-	Name    string
+	Name    string `json:"name" bson:"user_name"`
 	Age     int
 	Address Address
 }
