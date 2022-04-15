@@ -17,7 +17,7 @@ func New(userService service.UserService) UserController {
 }
 
 func (u *UserController) CreateUser(ctx *gin.Context) {
-	return nil
+	ctx.JSON(200, "nil")
 }
 
 func (u *UserServiceImpl) GetUser(name *string) {
