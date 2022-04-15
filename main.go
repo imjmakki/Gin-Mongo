@@ -18,6 +18,10 @@ var (
 	err            error
 )
 
+func init() {
+
+}
+
 func main() {
 
 }
