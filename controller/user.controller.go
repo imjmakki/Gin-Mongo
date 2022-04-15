@@ -18,7 +18,7 @@ func New(userService service.UserService) UserController {
 
 func (uc *UserController) CreateUser(ctx *gin.Context) {
 	var user model.User
-	ctx.ShouldBindJSON()
+	ctx.ShouldBindJSON(&user)
 	ctx.JSON(200, "")
 }
 
