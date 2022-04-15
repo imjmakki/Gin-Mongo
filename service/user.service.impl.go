@@ -11,6 +11,10 @@ type UserServiceImpl struct {
 	ctx            context.Context
 }
 
+func NewUserService(usercollection *mongo.Collection, ctx context.Context) UserService {
+
+}
+
 func (u *UserServiceImpl) CreateUser(user *model.User) error {
 	return nil
 }
