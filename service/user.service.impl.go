@@ -46,6 +46,9 @@ func (u *UserServiceImpl) GetAll() ([]*model.User, error) {
 		}
 		users = append(users, &user)
 	}
+	if err := cursor.Err(); err != nil {
+		return nil, err
+	}
 	return nil, nil
 }
 
