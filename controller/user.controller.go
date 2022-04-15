@@ -17,21 +17,21 @@ func New(userService service.UserService) UserController {
 }
 
 func (u *UserController) CreateUser(ctx *gin.Context) {
-	ctx.JSON(200, "nil")
+	ctx.JSON(200, "")
 }
 
 func (u *UserServiceImpl) GetUser(name *string) {
-	return nil, nil
+	ctx.JSON(200, "")
 }
 
 func (u *UserServiceImpl) GetAll() {
-	return nil, nil
+	ctx.JSON(200, "")
 }
 
 func (u *UserServiceImpl) UpdateUser(user *model.User) {
-	return nil
+	ctx.JSON(200, "")
 }
 
 func (u *UserServiceImpl) DeleteUser(name *string) {
-	return nil
+	ctx.JSON(200, "")
 }
