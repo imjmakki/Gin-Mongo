@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"Gin-Mongo/model"
 	"Gin-Mongo/service"
 	"github.com/gin-gonic/gin"
 )
@@ -20,18 +19,18 @@ func (u *UserController) CreateUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) GetUser(name *string) {
+func (u *UserServiceImpl) GetUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) GetAll() {
+func (u *UserServiceImpl) GetAll(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) UpdateUser(user *model.User) {
+func (u *UserServiceImpl) UpdateUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) DeleteUser(name *string) {
+func (u *UserServiceImpl) DeleteUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
