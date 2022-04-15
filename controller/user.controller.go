@@ -19,18 +19,18 @@ func (u *UserController) CreateUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) GetUser(ctx *gin.Context) {
+func (u *UserController) GetUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) GetAll(ctx *gin.Context) {
+func (u *UserController) GetAll(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) UpdateUser(ctx *gin.Context) {
+func (u *UserController) UpdateUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
 
-func (u *UserServiceImpl) DeleteUser(ctx *gin.Context) {
+func (u *UserController) DeleteUser(ctx *gin.Context) {
 	ctx.JSON(200, "")
 }
