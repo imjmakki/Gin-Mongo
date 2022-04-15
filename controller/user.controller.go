@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"Gin-Mongo/model"
 	"Gin-Mongo/service"
 	"github.com/gin-gonic/gin"
 )
@@ -16,6 +17,7 @@ func New(userService service.UserService) UserController {
 }
 
 func (uc *UserController) CreateUser(ctx *gin.Context) {
+	var user model.User
 	ctx.JSON(200, "")
 }
 
