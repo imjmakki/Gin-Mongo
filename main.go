@@ -4,6 +4,7 @@ import (
 	"Gin-Mongo/controller"
 	"Gin-Mongo/service"
 	"context"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -33,6 +34,8 @@ func init() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println("DB connected!")
 }
 
 func main() {
