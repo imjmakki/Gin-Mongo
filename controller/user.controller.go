@@ -60,6 +60,7 @@ func (uc *UserController) UpdateUser(ctx *gin.Context) {
 }
 
 func (uc *UserController) DeleteUser(ctx *gin.Context) {
+	username := ctx.Param("name")
 	ctx.JSON(200, "")
 }
 
