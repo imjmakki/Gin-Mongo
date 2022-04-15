@@ -23,6 +23,10 @@ func (uc *UserController) CreateUser(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"message": err.Error()})
 		return
 	}
+	err := uc.UserService.CreateUser(&user)
+	if err != nil {
+
+	}
 	ctx.JSON(200, "")
 }
 
