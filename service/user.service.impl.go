@@ -24,6 +24,7 @@ func (u *UserServiceImpl) CreateUser(user *model.User) error {
 }
 
 func (u *UserServiceImpl) GetUser(name *string) (*model.User, error) {
+	var user *model.User
 	return nil, nil
 }
 
